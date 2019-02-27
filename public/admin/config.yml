@@ -6,16 +6,13 @@ media_folder: "public/uploads" # Media files will be stored in the repo under pu
 public_folder: "/uploads" # Folder path where uploaded files will be accessed, relative to the base of the built site
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "src/posts" # The path to the folder where the documents are stored
+  - name: "posting" # Used in routes, e.g., /admin/collections/blog
+    label: "Posting" # Used in the UI
+    folder: "src/postings" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter. 
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter.
     # Remove any that aren't needed for posts
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Name", name: "name", widget: 'text'}
+      - {label: "Phone Number", name: "phone", widget: 'text'}
+      - {label: "Additional Description", name: "description", widget: 'markdown', required: false}
