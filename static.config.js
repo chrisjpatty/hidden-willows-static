@@ -42,7 +42,7 @@ function getPostings () {
 }
 
 export default {
-  plugins: ["react-static-plugin-emotion"],
+  // plugins: ["react-static-plugin-emotion"],
   getSiteData: () => ({
     title: 'Hidden Willows Apartments',
   }),

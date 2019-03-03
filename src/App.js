@@ -1,19 +1,16 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
+import { Router } from 'react-static'
 import { hot } from 'react-hot-loader'
 //
 import Routes from 'react-static-routes'
+import Header from './containers/Header'
 
 import './app.css'
 
 const App = () => (
   <Router>
-    <div>
-      <nav>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/blog">Blog</Link>
-      </nav>
+    <div className='page-wrapper'>
+      <Header />
       <div className="content">
         <Routes />
       </div>
